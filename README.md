@@ -8,10 +8,10 @@
 
 ## Integrantes
 
-| Nombre | usuario git hub |
-|---|
-| Santiago Fajardo |
-| Marco A. Rojas | marcook888 |
+| Nombre | Usuario GitHub |
+|---|---|
+| Santiago Fajardo | [santiago-fajardo](https://github.com/santiago-fajardo) |
+| Marco A. Rojas | [marcook888](https://github.com/marcook888) |
 
 ## Tabla de contenido
 
