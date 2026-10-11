@@ -111,15 +111,11 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 6.2 Obtención del archivo de datos
+### 6.2 Archivo de datos
 
-El archivo fuente `datos.xlsx` (~14.5 MB) está excluido del repositorio vía `.gitignore` por su tamaño. Para obtenerlo:
+El archivo fuente `datos.xlsx` (~14.5 MB) se encuentra incluido directamente en la raíz del repositorio (`./datos.xlsx`). El pipeline lo lee de forma automática al ejecutar `python pipeline.py`.
 
-1. Solicite el archivo `datos.xlsx` al equipo del proyecto o al docente (Fernando Barraza Alvarado).
-2. Colóquelo en la **raíz** del repositorio, de modo que quede en `./datos.xlsx`.
-3. El pipeline lo leerá automáticamente desde esa ubicación al ejecutar `python pipeline.py`.
-
-> **Nota:** No se requieren variables de entorno, credenciales ni conexión a bases de datos externas. El pipeline opera 100 % con archivos locales. Las carpetas `data/raw/` y `data/processed/` se crean automáticamente durante la ejecución si no existen.
+> **Nota:** No se requieren variables de entorno, credenciales ni conexión a bases de datos externas. El pipeline opera 100 % con archivos locales. Las carpetas `data/raw/` y `data/processed/` ya se encuentran sincronizadas en el repositorio con sus respectivos conjuntos de datos.
 
 ## 7. Ejecución
 
