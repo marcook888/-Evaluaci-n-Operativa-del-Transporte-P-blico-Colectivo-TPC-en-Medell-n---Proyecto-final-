@@ -81,6 +81,8 @@ El pipeline extrae las dos hojas del archivo Excel y las almacena como CSV crudo
 │
 ├── requirements.txt   <- Dependencias del proyecto.
 │
+├── fotos Dashboard    <- Capturas de pantalla del dashboard en Power BI.
+│
 ├── .gitignore         <- Archivos que git debe ignorar.
 │
 └── README.md          <- Este archivo.
@@ -243,6 +245,22 @@ El pipeline genera 4 archivos CSV en `data/processed/` que alimentan el dashboar
 - **`cumplimiento_flota.csv`** — 34 filas (una por empresa) con el % de cumplimiento de flota mínima.
 - **`resumen_empresa.csv`** — 34 filas con métricas de distribución de recorridos, firmas vencidas y outliers por empresa.
 - **`resumen_transmision.csv`** — 34 filas con la clasificación de modalidad de transmisión (en línea / batch / mixto) por empresa.
+
+### Visualizaciones del Dashboard (Power BI)
+
+A continuación se presentan las vistas del dashboard interactivo desarrollado en Power BI Desktop (`Dashboard_TPC_Medellin.pbix`), diseñado como herramienta de fiscalización y toma de decisiones para la Secretaría de Movilidad:
+
+#### 1. Auditoría Operativa y Cumplimiento de Flota (Página 1)
+![Auditoría Operativa y Cumplimiento de Flota](./fotos%20Dashboard/dashboard_cumplimiento_flota.jpeg)
+*Vista ejecutiva con indicadores macro (flota mínima de 2,567 vs flota operando de 2,121, con un cumplimiento global del 82.6%), gráfico de barras horizontales de cumplimiento por empresa con línea de referencia al 100%, gráfico de anillo con la proporción de empresas (7 cumplen vs 27 incumplen), segmentador por operador y matriz de balance operativo detallada.*
+
+#### 2. Modalidad de Transmisión y Efectividad de Recorridos (Página 2 — Parte 1)
+![Modalidad de Transmisión y Efectividad de Recorridos](./fotos%20Dashboard/dashboard_transmision_recorridos.jpeg)
+*Evaluación de la madurez tecnológica de la flota por operador (vehículos en línea vs. batch vs. mixto) y distribución de efectividad de los viajes (% completo vs. % parcial).*
+
+#### 3. Alertas Jurídicas y Top Empresas con Mayor Déficit de Flota (Página 2 — Parte 2)
+![Alertas Jurídicas y Top Empresas con Mayor Déficit de Flota](./fotos%20Dashboard/dashboard_alertas_deficit.jpeg)
+*Monitoreo de riesgo legal probatorio por firmas digitales expiradas (registros no aptos para procesos sancionatorios) y ranking gerencial de operadores con mayor déficit absoluto de vehículos (buses faltantes en calle) para priorización de controles operativos.*
 
 ```python
 # Ejemplo de consulta sobre los datos procesados
